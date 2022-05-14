@@ -1,18 +1,10 @@
-class Employee:
-    """A sample Employee class"""
-
-    def __init__(self, last, first, pay):#last and first the wrong way around
-        self.first = first
-        self.last = last
-        self.pay = pay
-    
-    @property
-    def email(self):
-        return f"{self.first}.{self.last}@email.com"
-    
-    @property
-    def fullname(self):
-        return f"{self.first} {self.last}"
-    
-    def __repr__(self):
-        return f"Employee('{self.first}', '{self.last}', '{self.pay}')"
+class Result:
+    def __init__(self, time, date, blood_sugar, carbs, insulin_short, insulin_long, insulin_correction, notes):
+        self.time = time
+        self.date = date
+        self.blood_sugar = blood_sugar
+        self.carbs = carbs
+        self.insulin_short = insulin_short
+        self.insulin_long = insulin_long
+        self.insulin_correction = insulin_correction
+        self.notes = notes
