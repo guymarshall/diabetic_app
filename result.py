@@ -1,5 +1,6 @@
 class Result:
-    def __init__(self, time, date, blood_sugar, carbs, insulin_short, insulin_long, insulin_correction, notes):
+    def __init__(self, user, time, date, blood_sugar, carbs, insulin_short, insulin_long, insulin_correction, notes):
+        self.user = user
         self.time = time
         self.date = date
         self.blood_sugar = blood_sugar
