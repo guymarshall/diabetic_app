@@ -1,14 +1,16 @@
+from dataclasses import dataclass
+
+@dataclass(frozen=True, order=True)
 class Result:
-    def __init__(self, user_id, time, date, blood_sugar, carbs, insulin_short, insulin_long, insulin_correction, notes):
-        self.user_id = user_id
-        self.time = time
-        self.date = date
-        self.blood_sugar = blood_sugar
-        self.carbs = carbs
-        self.insulin_short = insulin_short
-        self.insulin_long = insulin_long
-        self.insulin_correction = insulin_correction
-        self.notes = notes
+    user_id: int
+    time: time
+    date: date
+    blood_sugar: float
+    carbs: int
+    insulin_short: int
+    insulin_long: int
+    insulin_correction: int
+    notes: str
     
     def get_all():
         return ''
@@ -17,4 +19,4 @@ class Result:
         return ''
     
     def insert(result_data):
-        return '';
+        return ''
