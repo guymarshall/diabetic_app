@@ -9,7 +9,7 @@ c.execute("""CREATE TABLE IF NOT EXISTS users (
     first_name text,
     last_name text,
     birthdate integer
-)""")
+)""")#move into user model file
 
 emp_1 = User("Steve", "Jobs", 100000)
 emp_2 = User("John", "Doe", 24000)

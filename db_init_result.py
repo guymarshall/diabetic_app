@@ -9,7 +9,7 @@ c = conn.cursor()
 #     first text,
 #     last text,
 #     pay integer
-# )""")
+# )""")#move into result model file
 
 # c.execute("""INSERT INTO employees VALUES (
 #     "Corey",
