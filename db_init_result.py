@@ -1,26 +1,26 @@
 import sqlite3
-from employee import Employee
+from result import Result
 
-conn = sqlite3.connect("employee.db")
+conn = sqlite3.connect("result.db")
 
 c = conn.cursor()
 
-# c.execute("""CREATE TABLE employees (
+# c.execute("""CREATE TABLE results (
 #     first text,
 #     last text,
 #     pay integer
 # )""")#move into result model file
 
-# c.execute("""INSERT INTO employees VALUES (
+# c.execute("""INSERT INTO results VALUES (
 #     "Corey",
 #     "Schafer",
 #     50000
 # )""")
 
-emp_1 = Employee("Steve", "Jobs", 100000)
-emp_2 = Employee("John", "Doe", 24000)
+emp_1 = Result("Steve", "Jobs", 100000)
+emp_2 = Result("John", "Doe", 24000)
 
-# c.execute("""INSERT INTO employees VALUES (
+# c.execute("""INSERT INTO results VALUES (
 #     "Mary",
 #     "Schafer",
 #     70000
@@ -28,7 +28,7 @@ emp_2 = Employee("John", "Doe", 24000)
 
 # conn.commit()
 
-# c.execute(f"""INSERT INTO employees VALUES (
+# c.execute(f"""INSERT INTO results VALUES (
 #     ?,
 #     ?,
 #     ?
@@ -36,7 +36,7 @@ emp_2 = Employee("John", "Doe", 24000)
 
 # conn.commit()
 
-# c.execute(f"""INSERT INTO employees VALUES (
+# c.execute(f"""INSERT INTO results VALUES (
 #     :first,
 #     :last,
 #     :pay
@@ -44,11 +44,11 @@ emp_2 = Employee("John", "Doe", 24000)
 
 # conn.commit()
 
-# c.execute("SELECT * FROM employees WHERE last='Schafer'")
+# c.execute("SELECT * FROM results WHERE last='Schafer'")
 
-# c.execute("SELECT * FROM employees WHERE last=':last'", {"last": "Doe"})
+# c.execute("SELECT * FROM results WHERE last=':last'", {"last": "Doe"})
 
-c.execute("SELECT * FROM employees")
+c.execute("SELECT * FROM results")
 
 #last and first wrong way round in class, still working!!
 
