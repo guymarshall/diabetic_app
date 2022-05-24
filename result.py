@@ -1,10 +1,11 @@
 from dataclasses import dataclass
+from datetime import datetime
 
 @dataclass(frozen=True, order=True)
 class Result:
     user_id: int
-    time: time
-    date: date
+    time: datetime
+    date: datetime
     blood_sugar: float
     carbs: int
     insulin_short: int
